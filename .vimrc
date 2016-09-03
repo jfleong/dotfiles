@@ -155,9 +155,19 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if only nerdTree is open
-autocmd bufenter * if (winnr("$") == 1 &&
-    \ exists("b:NERDTreeType") &&
-    \ b:NERDTreeType == "primary") | q | endif
+function! s:CloseIfOnlyControlWinLeft()
+  if winnr("$") != 1
+    return
+  endif
+  if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+        \ || &buftype == 'quickfix'
+    q
+  endif
+endfunction
+augroup CloseIfOnlyControlWinLeft
+  au!
+  au BufEnter * call s:CloseIfOnlyControlWinLeft()
+augroup END
 
 " =================================================
 " Shit (shortcuts) I always Forget

@@ -4,4 +4,5 @@ alias pp="python -mjson.tool"
 alias tf='terraform'
 alias vn="vagrant"
 alias vnup="vn up --provider=vmware_fusion --provision"
+alias jfleong="cd ~/repos/personal/jfleong.github.io"
 

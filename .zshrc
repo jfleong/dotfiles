@@ -3,14 +3,6 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="gallois"
 
-# aliases
-if [ -f ~/.aliases ]; then
-  source ~/.aliases
-fi
-if [ -f ~/.work_aliases ]; then
-  source ~/.work_aliases
-fi
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -48,7 +40,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git knife terminalapp web-search)
+plugins=(git terminalapp web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,6 +66,14 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 [ -s "/Users/jason/.scm_breeze/scm_breeze.sh" ] && source "/Users/jason/.scm_breeze/scm_breeze.sh"
+
+# aliases
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
+if [ -f ~/.work_aliases ]; then
+  source ~/.work_aliases
+fi
 
 # make one big ssh config file
 if [ -d ~/.ssh/config_dir ]; then
