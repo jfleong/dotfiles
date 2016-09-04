@@ -6,18 +6,18 @@
 # hack font https://github.com/chrissimpkins/Hack
 # m+1m font https://www.fontsquirrel.com/fonts/m-1m
 
-# XXX TODO: Prompt user if they installed their fonts or install with cli if possible
+# XXX TODO: Prompt user if they installed their fonts, or install with cli if possible
+
+# Everything below this was taken from the following gist
+# osx for hackers: https://gist.github.com/brandonb927/3195465
 
 # show Hidden files
 echo "default to show hidden files"
 defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder
 
-# take the shit i need from here...
-# osx for hackers: https://gist.github.com/brandonb927/3195465
-
 echo ""
-echo "Hide the Spotlight icon? (y/n)"
+echo "Hide the Spotlight icon?"
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 echo ""
@@ -37,7 +37,7 @@ sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Aut
 
 echo ""
 echo "Disable keyboard from automatically adjusting backlight brightness in low light"
-    sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Keyboard Enabled" -bool false
+sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Keyboard Enabled" -bool false
 
 echo ""
 echo "Requiring password immediately after sleep or screen saver begins"
