@@ -30,6 +30,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 echo ""
 echo "Setting a blazingly fast keyboard repeat rate"
+defaults write NSGlobalDomain KeyRepeat -int 0
 
 echo ""
 echo "Disable display from automatically adjusting brightness?"
