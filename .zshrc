@@ -46,6 +46,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+### XXX: zshrc doesn't have the existing path appended adding it for pleasure
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
