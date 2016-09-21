@@ -40,7 +40,7 @@ ZSH_THEME="gallois"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git terminalapp web-search)
+plugins=(git terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,7 +65,7 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-[ -s "/Users/jason/.scm_breeze/scm_breeze.sh" ] && source "/Users/jason/.scm_breeze/scm_breeze.sh"
+[ -s "~/.scm_breeze/scm_breeze.sh" ] && source "~/.scm_breeze/scm_breeze.sh"
 
 # aliases
 if [ -f ~/.aliases ]; then
