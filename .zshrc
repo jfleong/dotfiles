@@ -66,7 +66,7 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-[ -s "~/.scm_breeze/scm_breeze.sh" ] && source "~/.scm_breeze/scm_breeze.sh"
+[ -s "/Users/jason/.scm_breeze/scm_breeze.sh" ] && source "/Users/jason/.scm_breeze/scm_breeze.sh"
 
 # aliases
 if [ -f ~/.aliases ]; then

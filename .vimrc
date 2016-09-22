@@ -169,6 +169,8 @@ augroup CloseIfOnlyControlWinLeft
   au BufEnter * call s:CloseIfOnlyControlWinLeft()
 augroup END
 
+au VimLeave * :!clear
+
 " =================================================
 " Shit (shortcuts) I always Forget
 " =================================================
