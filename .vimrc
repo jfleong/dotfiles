@@ -20,6 +20,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
+Plugin 'hashivim/vim-terraform'
 
 " Requires brew install ack
 Plugin 'mileszs/ack.vim'
