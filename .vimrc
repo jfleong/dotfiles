@@ -123,6 +123,7 @@ map <C-t> :NERDTreeToggle<CR>
 " I - toggle hidden files
 " m - open menu (ie for creating new files
 imap jj <Esc>
+imap kj <Esc>
 
 let g:multi_cursor_start_key='g<C-n>'
 let g:multi_cursor_start_word_key='<C-n>'

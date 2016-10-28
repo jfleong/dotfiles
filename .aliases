@@ -5,5 +5,6 @@ alias tf='terraform'
 alias vn="vagrant"
 alias vnup="vn up --provider=vmware_fusion --provision"
 alias jfleong="cd ~/repos/personal/jfleong.github.io"
-alias sz="source ~/.zshrc"
 
+alias sz="source ~/.zshrc"
+alias venv="source venv/bin/activate"
