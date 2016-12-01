@@ -1,6 +1,6 @@
 alias grep='grep --color=auto' # Always highlight grep search term
 
-alias pp="python -mjson.tool"
+alias pprint="python -mjson.tool"
 alias tf='terraform'
 alias vn="vagrant"
 alias vnup="vn up --provider=vmware_fusion --provision"
