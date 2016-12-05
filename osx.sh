@@ -26,7 +26,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 echo ""
 echo "Setting a blazingly fast keyboard repeat rate"
-defaults write NSGlobalDomain KeyRepeat -float 0.000000000001;
+defaults write NSGlobalDomain KeyRepeat -int 1;
 defaults read NSGlobalDomain KeyRepeat
 
 echo "Set a shorter Delay until key repeat"
