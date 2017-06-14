@@ -8,6 +8,10 @@
 
 # XXX TODO: Prompt user if they installed their fonts, or install with cli if possible
 
+# XXX TODO: install homebrew
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# brew install scmpuff
+
 # Everything below this was taken from the following gist
 # osx for hackers: https://gist.github.com/brandonb927/3195465
 

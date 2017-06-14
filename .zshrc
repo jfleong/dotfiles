@@ -65,8 +65,9 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-[ -s "/Users/jason/.scm_breeze/scm_breeze.sh" ] && source "/Users/jason/.scm_breeze/scm_breeze.sh"
+#
+# REQUIRES brew install scmpuff
+eval "$(scmpuff init -s)"
 
 # aliases
 if [ -f ~/.aliases ]; then
