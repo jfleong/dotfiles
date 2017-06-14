@@ -1,3 +1,4 @@
+alias gpu='git push origin -u HEAD'
 alias grep='grep --color=auto' # Always highlight grep search term
 
 alias pprint="python -mjson.tool"
