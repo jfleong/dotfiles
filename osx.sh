@@ -12,6 +12,9 @@
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # brew install scmpuff
 
+# XXX TODO: install spotify
+# https://download.scdn.co/SpotifyInstaller.zip
+
 # Everything below this was taken from the following gist
 # osx for hackers: https://gist.github.com/brandonb927/3195465
 
