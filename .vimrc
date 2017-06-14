@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+filetype on                   " required
 filetype off                  " required
 
 " =================================================
@@ -74,8 +75,7 @@ set nolist " disables linebreak
 syntax enable
 set background=dark
 colorscheme solarized
-set guifont=m+\ 1m:h16
-" set guifont=Hack:h16
+set guifont=Hack:h16
 
 "# for shit in mvim
 if has('gui_running')
