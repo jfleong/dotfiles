@@ -1,8 +1,9 @@
 # giterrdun
 alias gap='git add --patch'
+alias gcb='git checkout -b'
+alias gcv='git commit --verbose'
 alias gpl='git pull'
 alias gpu='git push origin -u HEAD'
-
 
 alias grep='grep --color=auto' # Always highlight grep search term
 

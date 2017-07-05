@@ -174,6 +174,8 @@ augroup CloseIfOnlyControlWinLeft
 augroup END
 
 au VimLeave * :!clear
+" Also switch from nerdtree by default
+autocmd VimEnter * wincmd w
 
 " =================================================
 " Shit (shortcuts) I always Forget
