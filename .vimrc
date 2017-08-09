@@ -48,6 +48,9 @@ set noswapfile
 set ruler
 set colorcolumn=80,100
 
+set splitbelow
+set splitright
+
 " if you want textmate style past 80 chars
 " let &colorcolumn=join(range(81,999),",")
 
@@ -68,6 +71,11 @@ au FileType ruby setl sw=2 sts=2 et
 set wrap
 set linebreak
 set nolist " disables linebreak
+
+set noerrorbells
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
 
 " =================================================
 " Color/Font
@@ -93,12 +101,11 @@ set showcmd
 " hi CursorLine ctermbg=8 ctermfg=15
 " set cursorcolumn
 
-" Highlight search results
+" Highlight search results and Ignore case when searching
 set hlsearch
 set incsearch
-
-" Ignore case when searching
 set ignorecase
+
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -176,6 +183,7 @@ augroup END
 au VimLeave * :!clear
 " Also switch from nerdtree by default
 autocmd VimEnter * wincmd w
+let NERDTreeIgnore = ['\.pyc$']
 
 " =================================================
 " Shit (shortcuts) I always Forget
