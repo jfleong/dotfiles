@@ -48,6 +48,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### XXX: zshrc doesn't have the existing path appended adding it for pleasure
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+export EDITOR="/usr/bin/vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

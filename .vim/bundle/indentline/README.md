@@ -15,16 +15,27 @@ If you use a plugin manager you can put the whole directory into your `~/.vim/bu
 To apply customization, apply the variable definitions to your `.vimrc` file.
 
 **Change Character Color**
+
+indentLine will overwrite 'conceal' color with grey by default. If you want to highlight conceal color with your colorscheme, disable by:
+```
+let g:indentLine_setColors = 0
+```
+
+Or you can customize conceal color by: 
 ```
 " Vim
 let g:indentLine_color_term = 239
 
-"GVim
+" GVim
 let g:indentLine_color_gui = '#A4E57E'
 
 " none X terminal
 let g:indentLine_color_tty_light = 7 " (default: 4)
 let g:indentLine_color_dark = 1 " (default: 2)
+
+" Background (Vim, GVim)
+let g:indentLine_bgcolor_term = 202
+let g:indentLine_bgcolor_gui = '#FF5F00'
 ```
 
 **Change Indent Char**
@@ -33,7 +44,7 @@ Vim and GVim
 ```
 let g:indentLine_char = 'c'
 ```
-where `'c'` can be any ASCII character. You can also use one of `¦`, `┆`, or `│` to display more beautiful lines. However, these characters will only work with files whose encoding is UTF-8.
+where `'c'` can be any ASCII character. You can also use one of `¦`, `┆`, `│`, `⎸`, or `▏` to display more beautiful lines. However, these characters will only work with files whose encoding is UTF-8.
 
 **Change Conceal Behaviour**
 
@@ -41,7 +52,7 @@ This plugin enables the Vim `conceal` feature which automatically hides stretche
 
 For example, users utilizing the built in json.vim syntax file will no longer see quotation marks in their JSON files.
 
-The default settings are:
+indentLine will overwrite your "concealcursor" and "conceallevel" with default value:
 
 ```
 let g:indentLine_concealcursor = 'inc'
@@ -49,6 +60,11 @@ let g:indentLine_conceallevel = 2
 ```
 
 You can customize these settings, but the plugin will not function if `conceallevel` is not set to 1 or 2.
+
+If you want to keep your conceal setting, put this line to your vim dotfile:
+```
+let g:indentLine_setConceal = 0
+```
 
 See the [VIM Reference Manual](http://vimdoc.sourceforge.net/htmldoc/version7.html#new-conceal) for more information on the `conceal` feature.
 
@@ -99,4 +115,5 @@ If you think this script is helpful, follow the [GitHub repository][repository],
 ![Screenshot](http://i.imgur.com/07Atrrs.png)
 
 ## License
-MIT
+- MIT
+- 知道vim normal模式下使用`gg`命令**后果**的人禁止使用。
