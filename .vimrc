@@ -39,7 +39,7 @@ set noswapfile
 
 " teh ruler
 set ruler
-set colorcolumn=80,100
+set colorcolumn=80
 
 set number
 
@@ -54,11 +54,6 @@ set shiftwidth=4
 set tabstop=4
 au FileType python setl sw=4 sts=4 et
 au FileType ruby setl sw=2 sts=2 et
-
-""" f*ck word wrapping
-set wrap
-set linebreak
-set nolist " disables linebreak
 
 " =================================================
 " Color/Font
@@ -80,7 +75,6 @@ set showcmd
 set hlsearch
 set incsearch
 set ignorecase
-
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -121,9 +115,12 @@ nnoremap <C-h> <C-W><C-H>
 " close window
 nnoremap <C-X> <C-W><C-C>
 
-" window height
-nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+" Enable the list of buffers
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#fnamecollapse = 0
+
+" " Show just the filename
+" let g:airline#extensions#tabline#fnamemod = ':t'
 " =================================================
 " Auto Commands
 " =================================================
@@ -134,21 +131,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if only nerdTree is open
-function! s:CloseIfOnlyControlWinLeft()
-  if winnr("$") != 1
-    return
-  endif
-  if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
-        \ || &buftype == 'quickfix'
-    q
-  endif
-endfunction
-augroup CloseIfOnlyControlWinLeft
-  au!
-  au BufEnter * call s:CloseIfOnlyControlWinLeft()
-augroup END
-
-au VimLeave * :!clear
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " =================================================
 " Shit (shortcuts) I always Forget

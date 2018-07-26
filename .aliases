@@ -10,6 +10,6 @@ alias grep='grep --color=auto' # Always highlight grep search term
 alias pprint="python -mjson.tool"
 alias sz="source ~/.zshrc"
 alias tf='terraform'
-alias venv='[ ! -d "venv" ] && virtualenv venv & . venv/bin/activate'
+alias venv='[ ! -d "venv" ] && virtualenv venv; . venv/bin/activate'
 alias vn="vagrant"
 alias viminstall="vim +PluginInstall +qall"
