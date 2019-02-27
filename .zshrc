@@ -47,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 ### XXX: zshrc doesn't have the existing path appended adding it for pleasure
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export EDITOR="/usr/bin/vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -66,9 +66,9 @@ export EDITOR="/usr/bin/vim"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-#
-# REQUIRES brew install scmpuff
-eval "$(scmpuff init -s)"
+
+# Activate scm breeze
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 # aliases
 if [ -f ~/.aliases ]; then

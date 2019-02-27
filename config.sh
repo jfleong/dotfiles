@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# XXX TODO: install zsh
-# echo "installing oh-my-zsh"
-# https://github.com/robbyrussell/oh-my-zsh
-# XXX TODO: install scm breeze
-# echo "installing scm breeze"
-# https://github.com/scmbreeze/scm_breeze
+echo "installing oh-my-zsh...\n\n"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "installing scm breeze\n\n"
+git clone git://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
+~/.scm_breeze/install.sh
+source ~/.zshrc
 
 DOTFILES_DIR=$( cd $(dirname $0) ; pwd -P )
 echo "dotfiles dir = $DOTFILES_DIR"
