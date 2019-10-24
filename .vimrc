@@ -40,7 +40,7 @@ set noswapfile
 set ruler
 set colorcolumn=80,120
 
-set relativenumber
+set number relativenumber
 
 " for copying shit without line numbers
 se mouse+=a
