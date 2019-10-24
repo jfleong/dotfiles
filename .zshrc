@@ -48,6 +48,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### XXX: zshrc doesn't have the existing path appended adding it for pleasure
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export EDITOR="/usr/bin/vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -82,3 +83,9 @@ fi
 if [ -d ~/.ssh/config_dir ]; then
   cat ~/.ssh/config_dir/* > ~/.ssh/config
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/jason/.sdkman"
+[[ -s "/Users/jason/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jason/.sdkman/bin/sdkman-init.sh"
+
+[ -s "/Users/jason/.scm_breeze/scm_breeze.sh" ] && source "/Users/jason/.scm_breeze/scm_breeze.sh"

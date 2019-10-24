@@ -12,13 +12,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " You know what it is
 Plugin 'gmarik/Vundle.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'vim-airline/vim-airline'
 Plugin 'Yggdroot/indentLine'
-Plugin 'hashivim/vim-terraform'
 
 " Git outta here
 Plugin 'tpope/vim-fugitive'
@@ -39,9 +38,12 @@ set noswapfile
 
 " teh ruler
 set ruler
-set colorcolumn=80
+set colorcolumn=80,120
 
-set number
+set relativenumber
+
+" for copying shit without line numbers
+se mouse+=a
 
 " bracket matching
 set showmatch
@@ -54,6 +56,7 @@ set shiftwidth=4
 set tabstop=4
 au FileType python setl sw=4 sts=4 et
 au FileType ruby setl sw=2 sts=2 et
+au FileType yaml setl sw=2 sts=2 et
 
 " =================================================
 " Color/Font
