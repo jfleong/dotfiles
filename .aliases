@@ -5,13 +5,7 @@ alias gcv='git commit --verbose'
 alias gpl='git pull'
 alias gpu='git push origin -u HEAD'
 
-alias grep='grep --color=auto' # Always highlight grep search term
-
-alias act="source $(find . -name 'activate')"
-alias genpass="openssl rand -base64 16 | pbcopy"
 alias pprint="python -mjson.tool"
 alias sz="source ~/.zshrc"
 alias tf='terraform'
 alias venv='[ ! -d "venv" ] && virtualenv venv; . venv/bin/activate'
-alias vn="vagrant"
-alias viminstall="vim +PluginInstall +qall"
