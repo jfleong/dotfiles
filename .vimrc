@@ -120,6 +120,8 @@ nnoremap <C-h> <C-W><C-H>
 " close window
 nnoremap <C-X> <C-W><C-C>
 
+let NERDTreeIgnore=['**.pyc$', '.pytest_cache', '**.egg-info', '__pycache__']
+
 " Enable the list of buffers
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#fnamecollapse = 0
