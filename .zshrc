@@ -40,7 +40,7 @@ ZSH_THEME="minimal"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git terminalapp)
+plugins=(git colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,3 +89,9 @@ export SDKMAN_DIR="/Users/jason/.sdkman"
 [[ -s "/Users/jason/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jason/.sdkman/bin/sdkman-init.sh"
 
 [ -s "/Users/jason/.scm_breeze/scm_breeze.sh" ] && source "/Users/jason/.scm_breeze/scm_breeze.sh"
+
+source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv newline)
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/python@3.7/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/python@3.7/lib/pkgconfig"

@@ -39,11 +39,13 @@ set noswapfile
 " teh ruler
 set ruler
 set colorcolumn=80,120
+set nowrap
 
 set number relativenumber
 
 " for copying shit without line numbers
-se mouse+=a
+set mouse+=a
+set mouse=v
 
 " bracket matching
 set showmatch
@@ -86,6 +88,10 @@ set whichwrap+=<,>,h,l
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
+" quit escape key'ing
+imap jj <Esc>
+imap kj <Esc>
+
 " =================================================
 " Moving around, tabs, windows and buffers
 " =================================================
@@ -98,10 +104,6 @@ map <C-t> :NERDTreeToggle<CR>
 " s - open in a horizontal split pane
 " I - toggle hidden files
 " m - open menu (ie for creating new files
-
-" quit escape key'ing
-imap jj <Esc>
-imap kj <Esc>
 
 let g:multi_cursor_start_key='g<C-n>'
 let g:multi_cursor_start_word_key='<C-n>'
