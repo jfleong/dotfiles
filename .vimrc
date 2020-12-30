@@ -65,7 +65,10 @@ au FileType yaml setl sw=2 sts=2 et
 " =================================================
 syntax enable
 set background=dark
+let g:solarized_termcolor=256
+let g:solarized_termtrans = 1 " This gets rid of the grey background
 colorscheme solarized
+
 
 if has('gui_running')
     set guifont=Hack:h16
@@ -144,9 +147,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Shit (shortcuts) I always Forget
 " =================================================
 " good to know commands
-" ciw - change inner word
-" ci( or ci{ - changes the contents of that paren or bracket block
-" di( or di{ - deletes the contents of that paren or bracket block
 
 " NAVIGATION
 " % - jump to matching brace
