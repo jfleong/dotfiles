@@ -5,6 +5,10 @@ alias gcv='git commit --verbose'
 alias gpl='git pull'
 alias gpu='git push origin -u HEAD'
 
+git config --global branch.master.pushRemote do_not_push_here
+git config --global branch.main.pushRemote do_not_push_here
+
+alias k="kubectl"
 alias pprint="python -mjson.tool"
 alias sz="source ~/.zshrc"
 alias tf="terraform"
