@@ -14,9 +14,11 @@ echo "dotfiles dir = $DOTFILES_DIR"
 echo "changing into dotfiles dir..."
 cd $DOTFILES_DIR
 
-echo "update our submodules (mainly vim plugins and what not...)"
-git submodule init
-git submodule update --recursive
+echo "installing vim plugins"
+if [ ! -f ".vim/bundle/Vundle.vim" ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
+fi
 
 echo "symlink my files"
 for dotfile in .aliases .vim .vimrc .zshrc; do
