@@ -52,4 +52,6 @@ if grep -q darwin <<<$OSTYPE; then
   echo "OSX detected..."
   echo "thank you for you money -Apple"
   $DOTFILES_DIR/osx.sh
+else
+  echo "not osx"
 fi

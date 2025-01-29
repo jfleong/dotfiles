@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="minimal"
+ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -87,11 +87,4 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/jason/.sdkman"
 [[ -s "/Users/jason/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jason/.sdkman/bin/sdkman-init.sh"
-
 [ -s "/Users/jason/.scm_breeze/scm_breeze.sh" ] && source "/Users/jason/.scm_breeze/scm_breeze.sh"
-
-source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv newline)
-export PATH="/usr/local/opt/python@3.7/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/python@3.7/lib"
-export PKG_CONFIG_PATH="/usr/local/opt/python@3.7/lib/pkgconfig"

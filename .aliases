@@ -13,5 +13,3 @@ alias pprint="python -mjson.tool"
 alias sz="source ~/.zshrc"
 alias tf="terraform"
 alias venv="[ ! -d "venv" ] && virtualenv venv; . venv/bin/activate"
-
-alias test_follow="pytest -f --color=yes"
