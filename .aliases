@@ -13,3 +13,16 @@ alias pprint="python -mjson.tool"
 alias sz="source ~/.zshrc"
 alias tf="terraform"
 alias venv="[ ! -d "venv" ] && virtualenv venv; . venv/bin/activate"
+
+function s3_free {
+    for var in "$@"
+    do
+        echo "Checking bucket name: $var"
+        exists=$(curl -sI "http://$var.s3.amazonaws.com" | grep bucket-region)
+        if [ -z "$exists" ]; then
+          echo "+++ bucket name :$var is available"
+        else
+          echo "XXX NOT AVAILABLE bucket name: $var XXX"
+        fi
+    done
+}

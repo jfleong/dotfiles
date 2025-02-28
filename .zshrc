@@ -1,7 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="random"
+ZSH_THEME="Agnoster"
+# ZSH_THEME="amuse" - cool but multiline... i guess i can be okay with that
+# ZSH_THEME="ys" - a nice multiline one
+# ZSH_THEME="pmcgee" # - cool multine line one again, don't like it has a weird auto complete thing
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -48,7 +51,6 @@ source $ZSH/oh-my-zsh.sh
 
 ### XXX: zshrc doesn't have the existing path appended adding it for pleasure
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export EDITOR="/usr/bin/vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -83,8 +85,7 @@ fi
 if [ -d ~/.ssh/config_dir ]; then
   cat ~/.ssh/config_dir/* > ~/.ssh/config
 fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/jason/.sdkman"
-[[ -s "/Users/jason/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jason/.sdkman/bin/sdkman-init.sh"
 [ -s "/Users/jason/.scm_breeze/scm_breeze.sh" ] && source "/Users/jason/.scm_breeze/scm_breeze.sh"
+export PATH=$PATH":/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH=$(pyenv root)/shims:$PATH
